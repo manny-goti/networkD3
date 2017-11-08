@@ -2,6 +2,8 @@
 output: md_document
 ---
 
+Manny's Sped up Forked Version
+
 # D3 JavaScript Network Graphs from R
 
 Development version: `r packageVersion("networkD3")`
