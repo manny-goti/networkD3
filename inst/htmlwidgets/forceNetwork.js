@@ -220,18 +220,18 @@ HTMLWidgets.widget({
       //if (options.focusOnHover) {
         var unfocusDivisor = 4;
 
-        link.transition().duration(100)
+        link.transition().duration(0)
           .style("opacity", function(l) { return d != l.source && d != l.target ? +options.opacity / unfocusDivisor : +options.opacity });
 
-        node.transition().duration(100)
+        node.transition().duration(0)
           .style("opacity", function(o) { return d.index == o.index || neighboring(d, o) ? +options.opacity : +options.opacity / unfocusDivisor; });
       //}
 
       d3.select(this).select("circle").transition()
-        .duration(100)
+        .duration(0)
         .attr("r", function(d){return nodeSize(d)+5;});
       d3.select(this).select("text").transition()
-        .duration(100)
+        .duration(0)
         .attr("x", 13)
         .style("stroke-width", ".5px")
         .style("font", options.clickTextSize + "px ")
@@ -243,10 +243,10 @@ HTMLWidgets.widget({
       link.style("opacity", +options.opacity);
 
       d3.select(this).select("circle").transition()
-        .duration(100)
+        .duration(50)
         .attr("r", function(d){return nodeSize(d);});
       d3.select(this).select("text").transition()
-        .duration(100)
+        .duration(50)
         .attr("x", 0)
         .style("font", options.fontSize + "px ")
         .style("opacity", options.opacityNoHover);
